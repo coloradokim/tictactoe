@@ -4,9 +4,9 @@ var xMoves =[]
 var boxes = document.getElementsByClassName('box')
 
 // //track play
-// var true or false
-// player1 []
-// player2 []
+// var turn = true;
+// var playsX = [];
+// var playsO = [];
 
 // store winning combinations
 	// var winningCombos = [
@@ -26,6 +26,7 @@ var boxes = document.getElementsByClassName('box')
     boxes[i].addEventListener("click", addXorO);
   }
 }
+addXandOListener();
 
 //XorO making
   function addXorO(event){
@@ -43,4 +44,19 @@ var boxes = document.getElementsByClassName('box')
       // checkForWin(XMoves, "X");
     }
 	}
+	console.log('the counter is ' + counter);
+	if (counter === 9){
+		alert("Game Over!");
+	}
 }
+
+// Clear all added styles, content and reset the turn
+	// var clearGame = function() {
+	// 	for (var i = 0; i < boxes.length; i++) {
+	// 		boxes[i].innerHTML = '';
+	// 		boxes[i].className = 'box';
+	// 	}
+	// 	playsX = [];
+	// 	playsO = [];
+	// 	turn = true;
+	// };
